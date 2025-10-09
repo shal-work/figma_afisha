@@ -1,0 +1,204 @@
+.page {
+    margin: 0 auto;
+    overflow-x: hidden;
+    display: flex; 
+    flex-direction: column;
+}
+.page.none-scroll {
+    overflow: hidden;
+}
+// прячем заголовок h1 
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+    clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+}
+
+.wrapper {
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex; 
+    flex-direction: column;
+    background-color: var(--white);
+    overflow-x: hidden;
+    position: relative;
+}
+
+.content {
+    padding: 60px 0;
+    display: none;
+    animation: 1s ease-in-out 1 fadeIn;
+    margin: 107px 0 auto;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        display: block;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp-afisha {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeOut-afisha {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.content.active {
+    display: block;
+}
+
+.review {
+    display: flex;
+    justify-content: center;
+    max-width: 1920px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin: 0 auto min(153px, max(var(--vw)* 153, 40px)) ;
+    width: 100%;
+   
+    @media (min-width: 1920px) {
+        padding-left: 312px;
+        padding-right: 312px;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    @media (max-width: 1260px) {
+        flex-wrap: wrap;
+    }
+    &_column {
+        flex-direction: column;
+        margin-bottom: min(91px, max(var(--vw)* 91, 40px));
+        @media (max-width: 1260px) {
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+.heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: min(104px, max(var(--vw)* 104, 24px));
+    gap: 24px;
+    &_announ {
+        margin-bottom: min(100px, max(var(--vw)* 100, 40px));
+    }
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        align-items: center;
+        column-gap: 32px;
+        row-gap: 12px;
+        @media (max-width: 320px) {
+            flex-direction: column-reverse;
+        }
+    }   
+    &__btn-events {
+        font-family: "EB Garamond", serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 140%;
+        letter-spacing: 0;
+        @media (max-width: 420px) {
+            font-size: 18px; 
+        }
+    } 
+}
+
+.date {
+    width: 78px;
+    &_amoun {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: var(--accent);
+        padding: 26px 51px;
+        border-radius: 12px;
+        position: relative;
+        margin-right: 27px;
+    }
+}
+
+.day {
+    font-family: "EB Garamond", serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 67%;
+    letter-spacing: 0;
+    text-align: center;
+    &_amoun {
+       font-size: 32px;
+       color: var(--white);
+    }
+    &_event-posters {
+        font-size: min(64px, max(var(--vw)* 64, 42px));
+    }
+}
+
+.month {
+    font-family: "EB Garamond", serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 67%;
+    letter-spacing: 0;
+    text-align: center;
+    &_amoun {
+       font-size: 18px; 
+       color: var(--white);
+    }
+    &_event-posters {
+        font-size: min(32px, max(var(--vw)* 32, 16px));
+    }
+}
+.opt {
+    width: 42px;
+    height: 42px;
+    @media (max-width: 320px) {
+        width: 100%;
+        height: 36px;
+    }
+}
+.title {
+    font-family: "EB Garamond", serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 140%;
+    letter-spacing: 2px;
+    text-align: center;
+    @media (max-width: 420px) {
+        font-size: 36px; 
+    }
+}
+.button {
+    position: relative;
+}
+

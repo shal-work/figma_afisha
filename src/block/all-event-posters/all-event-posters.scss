@@ -1,0 +1,27 @@
+.all-event-posters {
+    margin-top: 162px;
+    &__title {
+        margin-bottom: 100px;
+        margin-bottom: min(100px, max(var(--vw)* 100, 24px));
+    }
+}
+.all-event-posters.wrap {
+   display: none;
+}
+.all-event-posters.wrap.active {
+    display: block;
+    animation: 0.6s ease-in-out 1 fadeInUp-afisha;
+}
+.all-event-posters.wrap:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--grey);
+    bottom: 10px;
+    left: 0;
+    opacity: 1;
+    will-change: opacity;
+    animation: 1000ms ease-in-out 1 forwards fadeOut-afisha;
+}
+

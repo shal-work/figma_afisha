@@ -1,0 +1,84 @@
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    transition: all 0.2s;
+    font-weight: 600;
+    color: var(--white);
+    &_accent {
+        border: 1px solid var(--accent-contrast);
+        background-color: var(--accent-contrast);
+        &:hover {
+            background-color: var(--accent-hover);
+            border: 1px solid var(--accent-hover);
+            color: var(--white);
+        }
+    }
+    &-calendar {
+        width: 39px;
+        height: 39px;
+        color: var(--white);
+        background-color: var(--black_30);
+        font-weight: 400;
+        padding: 0;
+        border-radius: 0px;
+        &:hover {
+            background-color: var(--accent-hover);
+        }
+        &_accent {
+            background-color: var(--accent-contrast);
+            &:hover {
+                background-color: var(--accent-hover);
+            }
+        }
+        &_active {
+            background-color: var(--accent-hover);
+        }
+        @media (max-width: 420px) {
+            width: max(8vw, 20px);
+            height: max(8vw, 20px);
+            width: max(8vw, 16px);
+            height: max(8vw, 16px);
+            font-size: 12px;
+        }
+    }
+    &_prev, &_next {
+        width: 48px;
+        height: 48px;
+        position: relative;
+        color: var(--white);
+
+        background-color: var(--accent-contrast);
+        border-radius: 8px;
+        padding: 10px;
+        &:hover {
+            background-color: var(--accent-hover);
+        }
+        &:disabled {
+            background-color: var(--grey);
+        }
+        @media (max-width: 420px) {
+            width: 32px;
+            height: 32px;
+            padding: 4px;
+        }
+    }
+}
+
+.btn-area {
+    position: absolute;
+    background: transparent;
+    border: transparent;
+    margin: 0;
+    padding: 0;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}

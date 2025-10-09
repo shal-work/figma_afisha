@@ -1,0 +1,113 @@
+.slider {
+    display: flex;
+    min-width: min(1700px, max(var(--vw)* 1700, 575px));
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: min(196px, max(var(--vw)* 196, 40px));
+    padding: 0 20px;
+    @media (max-width: 768px) {
+        min-width: auto;
+    }
+    @media (max-width: 420px) {
+        padding: 0 2vw;
+    }
+    &__inner {
+        position: relative;
+        overflow: hidden; 
+        width: 100%;
+        max-width: 856px;
+        border-radius: 16px;
+        @media (max-width: 420px) {
+            border-radius: 8px
+        }
+    }
+    &__wrapper {
+        display: flex;
+        transition: transform 0.6s ease; //делаем плавное изменение
+    }
+    &__item {
+        flex: 0 0 100%;// свойство display: flex; заполнение пространства (растяжение=0, сужение=0, ширина=50%)
+        width: 100%;
+        max-height: 482px;
+        @media (max-width: 768px) {
+            margin: 0;
+        }
+    }
+    &__main-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 16px;
+        @media (max-width: 420px) {
+            border-radius: 8px;
+        }
+    }
+    &__previews-wrapper {
+        width: 100%;
+        max-height: 497px;
+        max-width: 416px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: #f9f9fd;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px; /* закругления плашки R не меньше ½ ширины*/
+            height: 10px;
+            background-color: #999; /* цвет плашки */
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #fff;
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            background-color: #f9f9fd;           
+        }
+        @media (max-width: 768px) {
+            max-width: none;
+            margin: 0;
+            max-height: 228px;
+            padding-right: 4px;
+            border: 1px solid var(--background-internal);
+            border-radius: 8px;
+        }
+
+    }
+}
+
+.thumb-slider {
+    display: flex;
+    align-items: center;
+    background-color: var(--black_5);
+    padding: 10px 19px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    @media (max-width: 420px) {
+        padding: 4vw;
+    }
+    &__picture {
+        margin-right: 20px;
+        width: 80px;
+        aspect-ratio: 1/1;
+        @media (max-width: 420px) {
+            width: 33%;
+            margin-right: 4vw;
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        font-weight: 600;
+        @media (max-width: 420px) {
+            width: 66%;
+            font-size: 12px;
+        }
+    }
+}

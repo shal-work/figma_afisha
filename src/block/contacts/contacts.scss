@@ -1,0 +1,91 @@
+ymaps.ymaps-2-1-79-image {
+    filter: invert(100%);
+
+    &::after {
+        content: 'Невский проспект 1/4';
+        background-color: var(--white);
+        color: #000;
+        padding: 4px;
+        border-radius: 4px;
+        white-space: nowrap;
+        left: 30px;
+        top: -20px;
+        position: relative;
+    }
+}
+
+.contacts {
+    margin: 161px auto 150px;
+    padding: 0 24px;
+    @media (max-width: 420px) {
+        padding: 0 12px;
+        margin: 140px auto 50px;
+    }
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: min(180px, max(var(--vw)* 180, 86px));
+        margin-bottom: min(60px, max(var(--vw)* 60, 26px));
+        @media (max-width: 920px) {
+            gap: 40px;
+        }
+        @media (max-width: 420px) {
+            gap: 0;
+        }
+    }
+    &__title {
+        margin-bottom: 102px;
+        margin-bottom: min(102px, max(var(--vw)* 102, 36px));
+    }
+    &__subtitle {
+        font-family: "EB Garamond", serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 140%;
+        margin-bottom: 24px;
+    }
+    &__text {
+        margin-bottom: 16px;
+    }
+    &__part {
+        margin-bottom: min(40px, max(var(--vw)* 40, 26px));
+    }
+    &__map-block {
+        height: 441px;
+        max-width: 856px;
+        overflow: hidden;
+        border-radius: 12px;
+        margin-bottom: 150px;
+        margin: 0 auto;
+        @media (max-width: 1200px) {
+            width: 90vw;
+        }
+        @media (max-width: 768px) {
+            height: 341px;
+        }
+        @media (max-width: 420px) {
+            width: 90vw;
+            height: 110vw;
+        }
+    }
+    &__map {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.module-map {
+    width: 100%;
+    height: 100%;
+    filter: invert(100%);
+}
+
+.contacts.wrap {
+   display: none;
+}
+.contacts.wrap.active {
+    display: block;
+    animation: 0.6s ease-in-out 1 fadeInUp-afisha;
+}
+

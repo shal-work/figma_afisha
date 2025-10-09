@@ -1,0 +1,170 @@
+.event-posters {
+    max-width: 1920px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: min(133px, max(var(--vw)* 133, 40px));
+    @media (min-width: 1920px) {
+        padding-left: 324px;
+        padding-right: 300px;
+        width: 100%;
+    }
+    @media (max-width: 420px) {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    &__text {
+        color: var(--grey-text);
+        color: var(--grey-text-contrast);
+    }
+    &__poster {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background-color: var(--grey-back);
+        padding: 29px 60px;
+        padding: min(29px, max(var(--vw)* 29, 12px))  min(60px, max(var(--vw)* 60, 12px));
+        border-radius: 16px;
+        margin-bottom: min(80px, max(var(--vw)* 80, 40px));
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+        @media (max-width: 420px) {
+            padding: 3vw;
+        }
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        @media (max-width: 768px) {
+            width: auto;
+        }
+        @media (max-width: 420px) {
+            flex-direction: column
+        }
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+        @media (max-width: 768px) {
+            width: 50%;
+            margin-right: 4px;
+        }
+        @media (max-width: 420px) {
+            flex-wrap: wrap;
+            justify-content: center;
+             width: auto;
+        }
+    }
+    &__date {
+        width: min(78px, max(var(--vw)* 78, 40px));
+        margin-right: min(60px, max(var(--vw)* 60, 0px));
+        @media (max-width: 768px) {
+            margin-right: 0;
+        }
+    }
+
+    &__picture {
+        height: auto;
+        display: flex;
+        flex: 0 1 24vw;
+        @media (max-width: 768px) {
+            max-width: none;
+            min-width: 135px;
+            height: auto;
+            flex: 1 1 135px;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__info {
+        width: 44%;
+        padding: 0 4px min(14px, max(var(--vw)* 14, 0));
+        @media (max-width: 768px) {
+            width: 50%;
+        }
+        @media (max-width: 420px) {
+            width: auto;
+        }
+    }
+    &__info-title {
+        font-family: "EB Garamond", serif;
+        font-weight: 700;
+        font-size: min(32px, max(var(--vw)* 32, 20px));
+        line-height: min(44px, max(var(--vw)*44, 20px));
+        letter-spacing: 0;
+        margin-bottom: min(16px, max(var(--vw)* 16, 8px));
+        @media (max-width: 420px) {
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+    }
+    &__info-text {
+        color: var(--black);
+        margin-bottom: min(40px, max(var(--vw)* 40, 8px));
+        font-size: min(16px, max(var(--vw)* 16, 14px));
+        @media (max-width: 420px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__options {
+        display: flex;
+        align-items: center;
+        height: 32px;
+        @media (max-width: 768px) {
+            height: 24px;
+        }
+        @media (max-width: 420px) {
+            height: auto;
+        }
+    }
+    &__option {
+        display: flex;
+        align-items: center;
+        margin-right: min(30px, max(var(--vw)* 30, 12px));
+        @media (max-width: 420px) {
+            width: 100%;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__icon {
+        width: min(29px, max(var(--vw)* 29, 14px));
+        height: auto;
+        margin-right: min(25px, max(var(--vw)* 25, 6px));
+        @media (max-width: 420px) {
+            width: 22px;
+            height: 22px;
+        }
+    }
+    &__button-ticket {
+       z-index: 10;
+    }
+    &__button {
+        display: flex;
+        position: relative;
+        @media (max-width: 1200px) {
+            padding: min(12px, max(var(--vw)* 12, 8px)) min(30px, max(var(--vw)* 30, 12px));
+            font-size: min(16px, max(var(--vw)* 16, 12px));
+            font-weight: 400;
+        }
+        @media (max-width: 768px) {
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 12px;
+            padding: 12px 30px;
+        }
+        @media (max-width: 420px) {
+            padding: 12px 26px;
+            font-weight: 400;
+        }
+    }
+}

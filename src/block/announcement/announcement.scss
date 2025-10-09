@@ -1,0 +1,17 @@
+.announcement {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
+    grid-template-rows: auto 1fr; 
+    grid-gap: 10px;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        padding-right: 12px;
+    }
+    &__heading {
+        font-weight: 600;
+        font-size: 14px;
+    }
+}

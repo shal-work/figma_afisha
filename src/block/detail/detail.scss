@@ -1,0 +1,133 @@
+.detail {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 50px;
+    display: block;
+    border-radius: 4px;
+
+    max-width: 1920px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100%;
+    margin: 140px auto 0;
+
+    @media (min-width: 1920px) {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+    @media (max-width: 420px) {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        margin: 100px auto 0;
+    }
+    &__block {
+        margin-top: min(100px, max(var(--vw)* 100, 30px));
+        display: flex;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__title {
+        letter-spacing: 0px;
+        margin-bottom: 24px;
+    }
+    &__subtitle {
+        font-family: "EB Garamond", serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 140%;
+        letter-spacing: 0;
+        margin-bottom: min(28px, max(var(--vw)* 28, 16px));
+    }
+    &__event {
+        margin-bottom: min(105px, max(var(--vw) * 105, 40px));
+        padding: 0;
+        @media (min-width: 1920px) {
+            padding-left: 310px;
+        }
+    }
+    &__content {
+        z-index: 10;
+        max-width: 631px;
+        width: 50%;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+    &__artists {
+        margin-bottom: 16px;
+    }
+    &__text-block {
+        padding-top: 22px;
+    }
+    &__text {
+        margin-bottom: 20px;
+    }
+    &__price {
+        margin-bottom: min(40px, max(var(--vw)* 40, 10px));
+    }
+    &__btn {
+        margin-bottom: 40px;
+        z-index: 10;
+    }
+    &__picture-main {
+        max-width: 526px;
+        height: auto;
+        margin-right: min(134px, max(var(--vw)* 134, 10px));
+        @media (max-width: 768px) {
+            height: auto;
+            display: none;
+        }
+    }
+    &__picture-main-768{
+        display: none;
+        @media (max-width: 768px) {
+            height: auto;
+            display: block;
+            margin-bottom: min(134px, max(var(--vw)* 134, 10px));
+        }
+    }
+    &__posters {
+        display: flex;
+    }
+    &__picture {
+        width: 306px;
+        height: auto;
+        margin-right: min(24px, max(var(--vw)* 24, 10px));
+        &:last-child {
+            margin-right: 0;
+        }
+        @media (max-width: 768px) {
+            height: auto;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.detail.wrap {
+   display: none;
+}
+.detail.wrap.active {
+    display: block;
+    animation: 0.6s ease-in-out 1 fadeInUp-afisha;
+}
+
+.detail.wrap:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--grey);
+    bottom: 10px;
+    left: 0;
+    opacity: 1;
+    will-change: opacity;
+    animation: 1000ms ease-in-out 1 forwards fadeOut-afisha;
+    z-index: 1;
+}
