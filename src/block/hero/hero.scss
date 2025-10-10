@@ -1,0 +1,67 @@
+.hero {
+    padding: 0;
+    padding-top: min(165px, max(var(--vw)* 165, 24px));
+    padding-top: 168px;
+    padding-bottom: min(170px, max(var(--vw)* 170, 24px));
+    padding-bottom: 170px;
+    width: 100%;
+    background-image: image-set(
+        url("./assets/img/hero.webp") type("image/webp"), 
+        url("./assets/img/hero.png")
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__content {
+        margin-left: min(383px, max(var(--vw)* 383, 48px));
+        @media (max-width: 1024px) {
+            margin-left: 10%;
+        }
+        @media (max-width: 420px) {
+            display: flex;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin: 0 min(40px, max(100vw/420 * 40, 12px));
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: min(50px, max(var(--vw)* 50, 34px));
+        line-height: min(50px, max(var(--vw)* 50, 34px));
+        line-height: 57px;
+        letter-spacing: 1px;
+        padding-bottom: 62px;
+        text-align: left;
+    }
+    &__sub-title {
+        font-weight: 400;
+        font-size: min(50px, max(var(--vw)* 50, 34px));
+        line-height: 1px;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        padding-bottom: 14px;
+        text-align: left;
+    }
+    &__btn {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 20.4px;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px min(57px, max(var(--vw)* 57, 24px));
+        
+    }
+}
+

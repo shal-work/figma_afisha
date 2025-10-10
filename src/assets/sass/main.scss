@@ -1,0 +1,30 @@
+.wrapper {
+    background-color: var(--background);
+    overflow-x: hidden;
+}
+
+// прячем заголовок h1 
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+    clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+}
+
+.attention {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20.4px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--attention);
+    color: var(--text-attention-contrast);
+    padding: 10px;
+    text-align: center;
+}

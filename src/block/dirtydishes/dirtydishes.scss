@@ -1,0 +1,71 @@
+.dirtydishes {
+    background-color: var(--background-text);
+    justify-content: space-between;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    @media (max-width:767px) {
+        grid-template-areas: "area-1 area-2"
+                             "area-3 area-3";
+        grid-template-columns: 0.5fr 0.5fr;
+
+    }
+
+    &__picture {
+        width: 100%;
+        height: 100%;
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__area-1 {
+        @media (max-width:767px) {
+            grid-area: area-1;        
+        }
+    }
+    &__area-2 {
+        @media (max-width:767px) {
+            grid-area: area-2;        
+        }                  
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        padding: 12px;   
+        // width: 33.3%; 
+        @media (max-width:767px) {
+            grid-area: area-3;
+            padding-bottom: 24px; 
+        }     
+    }
+    &__hashtag {
+        font-size: 12px;
+        line-height: 20.4px;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: min(33.3px, max(var(--vw)* 33, 12px));
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        font-size: min(24px, max(var(--vw)* 24, 18px));
+        line-height: min(46.08px, max(var(--vw)* 46.08, 24px));
+        letter-spacing: 1px;
+        text-align: center;
+        margin-bottom: min(62px, max(var(--vw)* 62, 24px));
+    }
+    &__btn {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.5px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 18px min(54px, max(var(--vw)* 54, 24px));
+    }        
+}

@@ -1,41 +1,111 @@
 <footer class="footer">
-    <div class="footer__content">
-        <div class="footer__column-logo">
-            <div class="picture-logo">
-                <picture>
-                    <source type="image/webp" srcset="assets/img/logo_488_12.webp" media="(max-width: 412px)">
-                    <source type="image/png" srcset="assets/img/logo_488_12.webp" media="(max-width: 412px)">                    
-                    <source type="image/webp" srcset="assets/img/logo.webp">
-                    <img class="picture-logo__img" src="assets/img/logo.png" alt="Сайт концертно-эскурсионных программ"  width="325" height="12">
-                </picture>  
-            </div>
+    <div class="footer__top">
+        <div class="footer__keep-touch">
+            <h2 class="footer__title reset">Keep in touch 🙂</h2>
+            <p class="footer__text reset">Be the first to know about new collections, special events, and what’s going on at Our Place.</p>
+            <form class="footer__form form" action="#" enctype="multipart/form-data" method="POST">
+                <div class="form__control">
+                    <input class="form__input" id="email" required type="email" placeholder="Your email" aria-label="Your email"  size="50">
+                </div>
+                <button class="btn btn-white form__btn" name="submit" type="submit">Submit</button>
+            </form>
         </div>
-        <div class="footer__column-block">
-            <div class="footer__column">
-                <h3 class="footer__title reset">Мероприятия</h3>
-                <nav class="footer__menu">
-                    <ul class="footer__menu-items reset">
-                        <li class="footer__menu-item" data-wow-duration="0.8s" data-wow-delay="0.7s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.8s; animation-name: fadeInDown;">
-                            <a href="#"  class="footer__link text-nobreak underline-anime ">Экскурсии</a>
-                        </li>
-                        <li class="footer__menu-item" data-wow-duration="0.8s" data-wow-delay="0.8s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.8s; animation-name: fadeInDown;">
-                            <a href="#" class="footer__link text-nobreak underline-anime ">Концерты</a>
-                        </li>
-                        <li class="footer__menu-item" data-wow-duration="0.8s" data-wow-delay="0.9s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.8s; animation-name: fadeInDown;">
-                            <a href="#" class="footer__link text-nobreak underline-anime" data-poster>Афиша</a>
-                        </li>
-                    </ul>
-                </nav>
+        <div class="footer__block">
+            <div class="footer__items">
+                <ul class="footer__list reset">
+                    <li class="footer__list-item">
+                        <h3 class="footer__subtitle reset">Shop</h3>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Main Plates</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Side Bowls</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Drinking Glasses</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Family Dinner Bundle</a>
+                    </li>
+                </ul>
+
+                <ul class="footer__list reset">
+                    <li class="footer__list-item">
+                        <h3 class="footer__subtitle reset">Company</h3>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Mission</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">FAQs</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Contact Us</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Returns</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Bulk Orders</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Careers</a>
+                    </li>
+                </ul>
+                
+                <ul class="footer__list reset">
+                    <li class="footer__list-item">
+                        <h3 class="footer__subtitle reset">Social</h3>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Instagram</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Twitter</a>
+                    </li>
+                </ul>
             </div>
-            <div class="footer__column">
-                <h3 class="footer__title reset">Контакты</h3>
-                <p class="footer__text reset">г. Санкт-Петербург, Невский пр., д. 1</p>
-                <p class="footer__text footer__mail reset">text@mail.ru</p>
-                <p class="footer__text reset">(812) 123-45-67</p>
+            <div class="footer__lower">
+                <h3 class="footer__subtitle reset">You're In</h3>
+                <div class="footer__flags">
+                    <button class="footer__flag btn" aria-label="usa">
+                        <svg class="footer__arrow">
+                            <use href="assets/img/spriteStyle.svg#usa"></use>
+                        </svg>
+                    </button>
+                    <button class="footer__flag btn" aria-label="canada">
+                        <svg class="footer__arrow" >
+                            <use href="assets/img/spriteStyle.svg#canada"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
 
     </div>
-    <p class="footer__copyright reset">Сайт концертно-экскурсионных программ</p>
-
+    <div class="footer__additional">
+        <p class="footer__copyright reset">© Our Place 2021</p>
+        <ul class="footer__additional-list reset">
+            <li class="footer__list-item footer__additional-item">
+                <a href="#" class="footer__additional-link">Copyright 2021</a>
+            </li>
+            <li class="footer__list-item footer__additional-item">
+                <a href="#" class="footer__additional-link">Privacy</a>
+            </li>
+            <li class="footer__list-item footer__additional-item">
+                <a href="#" class="footer__additional-link">Terms</a>
+            </li>
+            <li class="footer__list-item footer__additional-item">
+                <a href="#" class="footer__additional-link">Returns</a>
+            </li>
+            <li class="footer__list-item  footer__additional-item">
+                <a href="#" class="footer__additional-btn btn" aria-label="pwd">
+                    <svg class="footer__pwd">
+                        <use href="assets/img/spriteStyle.svg#pwd"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
 </footer>

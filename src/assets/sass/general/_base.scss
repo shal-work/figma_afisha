@@ -11,40 +11,56 @@ body {
 }
 :root {
     --index: calc(1vw + 1vh);
-    --vw: calc(100vw/1920);
-    --container-padding-x: min(312px, max(var(--vw)* 312, 120px));
+    --vw: calc(100vw/1440);
+    --container-padding-x: min(165px, max(var(--vw)* 165, 24px));
     --container-width: min(1920px, max(var(--vw)* 1920, 24px));
-    // --container-width: 1920px;
 }
 
 a, a:link, a:visited {
     text-decoration: none;
 }
-
 * {
-    font-family: "Fira Sans", sans-serif;  // font-family: "EB Garamond", serif;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
-    line-height: 140%;
-    letter-spacing: 0;
-    color: var(--black);
+    color: var(--text);
 }
 
 // прячем прокрутку
-html {
-    overflow: scroll;
+// body {
+//     overflow: scroll;
+//     overflow-x: hidden;
+// }
+.page {
+    overflow-y: scroll;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0; //при верстке по БЭМ нежелательно применять общие сброс стилей в *
+}
+.page.none-scroll {
+    overflow: hidden;
 }
 ::-webkit-scrollbar {
-    width: 0px;
+    // width: 0px;
+    width: 5px;
+    width: 8px;
     height: 5px;
     background: transparent;
     // position: fixed;
 }
 /* Optional: show position indicator in red */
+/* border-radius: 10px; закругления плашки R не меньше ½ ширины*/
 ::-webkit-scrollbar-thumb {
-    background: grey;
+    // background: #FF0000;
+    background: gainsboro;
+    border-radius: 10px;
+    border: 2px solid var(--background); 
 }
 .reset {
     margin: 0; //при верстке по БЭМ нежелательно применять общие сброс стилей в *
@@ -53,14 +69,11 @@ html {
 .container {
     max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
     margin: 0 auto;
-    padding-right: var(--container-padding-x);
     padding-left: var(--container-padding-x);
+    padding-right: var(--container-padding-x);
     width: 100%;
 }
-.reset {
-    margin: 0; //при верстке по БЭМ нежелательно применять общие сброс стилей в *
-    padding: 0; //при верстке по БЭМ нежелательно применять общие сброс стилей в *
-}
+
 .fadeOut {
     opacity: 0;
 }
@@ -71,4 +84,3 @@ html {
 .footer {
     margin-top: auto;
 }
-

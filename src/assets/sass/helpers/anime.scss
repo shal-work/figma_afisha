@@ -1,0 +1,54 @@
+
+@media (max-width: 412px) {
+    .anime {
+        will-change: transform;
+        animation-name: show-modular;
+        animation-delay: 0s;
+        animation-duration: 30s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .anime1 {
+        animation-delay: 0s;
+    }
+    .anime2 {
+        animation-delay: 5s;
+    }
+    .anime3 {
+        animation-delay: 10s;
+    }
+    .anime4 {
+        animation-delay: 15s;
+    }
+    .anime5 {
+        animation-delay: 20s;
+    }
+    .anime6 {
+        animation-delay: 25s;
+    }
+}
+
+@keyframes show-modular { 
+    0% {
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    15% {
+        opacity: 1;
+    }
+    17% {
+        opacity: 0;
+    }
+    21% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
