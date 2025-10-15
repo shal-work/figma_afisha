@@ -97,6 +97,7 @@ $.prototype.closest = function(selector) {
 
     for (let i = 0; i < this.length; i++) {
         let this1 = this[i].closest(selector);
+        debugger
         if(!this1) { //мое условие
             // this[i] = 'classNull';
             return this;
@@ -109,6 +110,7 @@ $.prototype.closest = function(selector) {
     for (; counter < objLength; counter++) {
         delete this[counter];
     }
+    debugger
     return this;
 };
 

@@ -1,35 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Place website by figma</title>
-    <meta name="description" content="Сайт Our Place по Figma">
+    <title>Afisha website by figma</title>
+    <meta name="description" content="Сайт по макерту Figma из https://verstaem.online/projects/">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="./favicon.ico">
 </head>
 
 <body class="page">
     <div class="wrapper">
-        <h1 class="visually-hidden">Our Place web-site for verstaem.online</h1>
-        <h2 class="attention reset">SHIPPING AND RETURNS ARE ALWAYS FREE FROM OUR PLACE TO YOURS 🙂</h2>
+        <h1 class="visually-hidden">Afisha web-site for verstaem.online</h1>
         @@include('block/header/header.html')
-        <main class="main">
-            @@include('block/hero/hero.html')
-            @@include('block/logos/logos.html')
-            @@include('block/welcome/welcome.html')
-            @@include('block/design/design.html')
-            @@include('block/essentials/essentials.html')
-            @@include('block/dirtydishes/dirtydishes.html')
+        <main class="content active">
+            @@include('block/slider/slider.html')
+            @@include('block/event-posters/event-posters.html')
+            <section class="review">
+                @@include('block/news/news.html')
+                @@include('block/calendar/calendar.html')
+            </section>
+            @@include('block/announcement/announcement.html')
         </main>
+
+        @@include('block/all-event-posters/all-event-posters.html')
+        @@include('block/detail/detail.html')
+        @@include('block/contacts/contacts.html')
         @@include('block/footer/footer.html')
     </div>
 
+
+    
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="script.js"></script>
 </body>
 

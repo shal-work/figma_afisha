@@ -1,65 +1,67 @@
+
+
+$trigger_burger: 768px;
+
 .header {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    padding: 24px 48px;
-    // padding: min(30px, max(var(--vw)* 30, 12px)) min(48px, max(var(--vw)* 48, 18px));
+    padding-left: min(301px, max(var(--vw)* 301, 24px));
+    padding-right: min(301px, max(var(--vw)* 301, 24px));
     position: relative;
-    @media (max-width: 767px){
-        flex-direction: column;
+    background-color: var(--black);
+    position: fixed;
+    z-index: 20;
+    width: 100vw;
+
+    @media (max-width: 1200px) {
+        padding: 10px 24px;
     }
-    @media (max-width: 420px){
-        flex-direction: row;
+    @media (max-width: 420px) {
+        padding: 2vw 6vw;
     }
+
+    &__inner  {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1296px;
+        width: 100%;
+        height: 104px;
+        margin: 0 auto;
+        @media (max-width: 1600px) {
+            justify-content: center;
+            flex-direction: column;
+        }
+        @media (max-width: $trigger_burger) {
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
     &__nav {
         display: flex;
         justify-content: space-between;
-        width: 100%;
-        position: absolute;
-        padding: 0 48px;
-        @media (max-width: 767px){
-            position: relative;
-            padding: 0;
-            padding-top: 20px;
-        }
     }
     &__burger {
         display: none;
-        @media (max-width: 420px) {
+        @media (max-width: $trigger_burger) {
             display: flex;
             position: relative;
-            z-index: 10;
-            width: 31.5px;
+            z-index: 100;
+            width: 51.5px;
             aspect-ratio: 1/1;
             cursor: pointer;
-        }
-    }
-    &__picture {
-        max-width: 131px;
-        max-height: 32px;
-        width: 100%;
-        height: 100%;
-    }
-    &__img {
-        width: 100%;
-        height: auto;
-        @media (max-width: 412px) {
-            padding: 0 8px;
+            padding: 10px;
+            background-color: transparent;
+            border: 0;
         }
     }
 }
 .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    @media (max-width: 420px) {
+    @media (max-width: $trigger_burger) {
         flex-direction: column;
         position: fixed;
-        top:0;
         left: 0;
-        top: 8rem;
+        top: 5rem;
         flex-direction: column;
         justify-content: flex-start;
         animation: 0.5s fadeOutLeft forwards;
@@ -67,13 +69,13 @@
         height: 100vh;
         max-height: none;
         overflow-y: auto;
-        background-color: var(--attention);
+        background-color: var(--black);
         padding-top: 20px;
+        z-index: 10;
     }
     &__items {
         display: flex;
-        justify-content: flex-start;
-        @media (max-width: 420px) {
+        @media (max-width: $trigger_burger) {
             flex-direction: column;
             align-items: center;
         }
@@ -81,56 +83,67 @@
     &__item {
         list-style: none;
         padding: 5px 0;
-        padding-right: 3.3vw;
+        padding-right: min(19px, max(var(--vw)* 19, 12px));
+        padding-left: min(30px, max(var(--vw)* 30, 24px));
         overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        &:first-child {
+            padding-left: 0;
+        }
         &:last-child {
             padding-right: 0;
         }
-        @media (max-width: 420px) {
+        &:hover {
+            transform: scale(1.1, 1.1) translate3d(5px, 0, 0);
+            transition: transform 300ms;
+        }
+        &:not(:first-child)::before {
+            content: '';
+            background-image: url("../assets/img/spriteIco.svg#rectangle");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: contain;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 8px;
+            height: 8px;
+            position: absolute;   
+            @media (max-width: $trigger_burger) {
+                top: 12px;
+                transform: translateY(0%);
+                left: 50%;
+            }
+        }
+        &_footer {
+            padding: 5px 11px;
+            &:not(:first-child)::before  {
+                content: none ;
+            }
+        }
+        @media (max-width: $trigger_burger) {
             width: 100%;
             text-align: center;
             padding: 0;
-            margin: 12px;
+            padding-top: 34px;
         }
     }
     &__link {
-        font-weight: 700;
-        font-size: 13px;
-        line-height: 22.1px;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--white);
+        z-index: 10;
         @media (max-width: 420px) {
             font-size: 24px;
         }
     }
-    &__indicator {
-        display: flex;
-        max-width: 35px;
-        width: 35px;
-        height: 35px;
-        background-color: var(--indicator);
-        border-radius: 50%;
-        padding: 0;
-        @media (max-width: 420px) {
-
-        }
-    }
-    
-    &__count {
-        font-weight: 700;
-        font-size: 13px;
-        line-height: 35px;
-        letter-spacing: 0.5px;
-        text-align: center;
-        width: 100%;
-        color: var(--background-text);
-    }
 }
+
 .icon-bar {
     --h: 2px;
     --top: 11px;
-    background: var(--text);
+    background: var(--white);
     position: relative;
     top: 12px;
     display: block; //создаем элементы бургера
@@ -147,7 +160,7 @@
         transition: top .25s .25s,transform .25s;
     }
     &::after, &::before {
-        background: var(--text);
+        background: var(--white);
         content: "";
         position: absolute;
         left: 0;
@@ -164,14 +177,16 @@
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0px;
     width: 100%;
     height: 1px;
-    background-color: var(--text);
+    background-color: var(--white);
     opacity: 0;
-    transform: translate3d(-100%, 0, 0); //прячем черту левее блока, он скрыт из-за overflow: hidden;
+
+    transform: translate3d(-10%, 0, 0); //прячем черту левее блока, он скрыт из-за overflow: hidden;
     transition: opacity 300ms, transform 900ms;
-    will-change: transform;
+    will-change: auto;
+    overflow: hidden;
 }
 
 .underline-anime:hover::after {
@@ -179,7 +194,7 @@
     opacity: 1;
 }
 
-@media (max-width: 420px) {
+@media (max-width: $trigger_burger) {
     .fadeIn--open .menu {
         animation: 0.5s fadeInLeft forwards;
     }
@@ -222,3 +237,41 @@
         transform: none;
     }
 }
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.picture-logo {
+    @media (max-width: 1600px) {
+        padding-bottom: 6px;
+    }
+    @media (max-width: $trigger_burger) {
+        margin: 0 auto;
+        padding-bottom: 0;
+    }
+    @media (max-width: 420px) {
+        visibility: hidden;
+        &::after {
+            content: 'Сайт концертно-экскурсионных программ';
+            display: block;
+            visibility: visible;
+            color: var(--bgc);
+            text-align: center;
+            top: -10px;
+            position: relative;
+            font-size: 10px;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
