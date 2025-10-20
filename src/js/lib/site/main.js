@@ -3,7 +3,7 @@ import CarouselTitle from '../components/slider-class-afisha-title.js';
 
 let burger = false;
 $('.header__burger').on('click', () => {
-    toggleBurger()
+    toggleBurger();
     burger = true;
 });
 $('.menu').on('click', () => {

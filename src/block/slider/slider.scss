@@ -9,8 +9,8 @@
     @media (max-width: 768px) {
         min-width: auto;
     }
-    @media (max-width: 420px) {
-        padding: 0 2vw;
+    @media (max-width: 412px) {
+        padding: 0 6vw;
     }
     &__inner {
         position: relative;
@@ -18,7 +18,7 @@
         width: 100%;
         max-width: 856px;
         border-radius: 16px;
-        @media (max-width: 420px) {
+        @media (max-width: 412px) {
             border-radius: 8px
         }
     }
@@ -39,7 +39,7 @@
         max-width: 100%;
         height: auto;
         border-radius: 16px;
-        @media (max-width: 420px) {
+        @media (max-width: 412px) {
             border-radius: 8px;
         }
     }
@@ -85,14 +85,14 @@
     border-radius: 8px;
     cursor: pointer;
     width: 100%;
-    @media (max-width: 420px) {
+    @media (max-width: 412px) {
         padding: 4vw;
     }
     &__picture {
         margin-right: 20px;
         width: 80px;
         aspect-ratio: 1/1;
-        @media (max-width: 420px) {
+        @media (max-width: 412px) {
             width: 33%;
             margin-right: 4vw;
         }
@@ -105,7 +105,7 @@
 
     &__title {
         font-weight: 600;
-        @media (max-width: 420px) {
+        @media (max-width: 412px) {
             width: 66%;
             font-size: 12px;
         }

@@ -5,10 +5,15 @@
     grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
     grid-template-rows: auto 1fr; 
     grid-gap: 10px;
+    @media (max-width: 412px) {
+       grid-template-columns:  1fr;
+    }
     &__wrapper {
         display: flex;
         align-items: center;
-        padding-right: 12px;
+        @media (max-width: 412px) {
+            justify-content: space-around;
+        }
     }
     &__heading {
         font-weight: 600;

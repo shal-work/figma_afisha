@@ -14,7 +14,7 @@ $trigger_burger: 768px;
     @media (max-width: 1200px) {
         padding: 10px 24px;
     }
-    @media (max-width: 420px) {
+    @media (max-width: 412px) {
         padding: 2vw 6vw;
     }
 
@@ -134,7 +134,7 @@ $trigger_burger: 768px;
         font-size: 16px;
         color: var(--white);
         z-index: 10;
-        @media (max-width: 420px) {
+        @media (max-width: 412px) {
             font-size: 24px;
         }
     }
@@ -255,7 +255,7 @@ $trigger_burger: 768px;
         margin: 0 auto;
         padding-bottom: 0;
     }
-    @media (max-width: 420px) {
+    @media (max-width: 412px) {
         visibility: hidden;
         &::after {
             content: 'Сайт концертно-экскурсионных программ';

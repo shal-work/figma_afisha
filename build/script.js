@@ -1149,7 +1149,7 @@ __webpack_require__.r(__webpack_exports__);
 
 let burger = false;
 $('.header__burger').on('click', () => {
-    toggleBurger()
+    toggleBurger();
     burger = true;
 });
 $('.menu').on('click', () => {
