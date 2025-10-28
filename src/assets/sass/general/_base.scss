@@ -31,15 +31,11 @@ a, a:link, a:visited {
 }
 
 // прячем прокрутку
-html {
-    overflow: scroll;
-    overflow-x: hidden;
-}
 ::-webkit-scrollbar {
     width: 0px;
     height: 5px;
     background: transparent;
-    // position: fixed;
+    position: fixed;
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
