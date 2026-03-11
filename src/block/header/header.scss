@@ -100,7 +100,7 @@ $trigger_burger: 768px;
         }
         &:not(:first-child)::before {
             content: '';
-            background-image: url("../assets/img/spriteIco.svg#rectangle");
+            background-image: url("assets/img/spriteIco.svg#rectangle");
             background-repeat: no-repeat;
             background-position: 50% 50%;
             background-size: contain;
